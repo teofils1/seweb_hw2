@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Book to Jena Model</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light text-dark">
+    <div class="container mt-5">
+        <div class="card shadow-sm mx-auto border-0" style="max-width: 600px;">
+            <div class="card-header bg-white border-bottom">
+                <h2 class="h4 mb-0 py-2">Add a New Book</h2>
+            </div>
+            
+            <form th:action="@{/books/add}" method="post" class="card-body">
+                <div class="mb-3">
+                    <label class="form-label text-secondary">Title (Required)</label>
+                    <input type="text" class="form-control" name="title" required />
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label text-secondary">Author</label>
+                    <input type="text" class="form-control" name="author" />
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label text-secondary">Themes <small class="text-muted">(Hold CTRL/Command to select multiple)</small></label>
+                    <select class="form-select" name="themes" multiple size="4">
+                        <option value="Science Fiction">Science Fiction</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Mystery">Mystery</option>
+                        <option value="Murder">Murder</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Action">Action</option>
+                    </select>
+                </div>
+                
+                <div class="mb-4">
+                    <label class="form-label text-secondary">Reading Level</label>
+                    <select class="form-select" name="readingLevel">
+                        <option value="">-- Select Reading Level --</option>
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Advanced">Advanced</option>
+                    </select>
+                </div>
+                
+                <div class="d-flex justify-content-end">
+                    <a class="btn btn-outline-secondary px-4 me-2" th:href="@{/books}">Cancel</a>
+                    <button type="submit" class="btn btn-primary px-4">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- RAG Chat Widget -->
+    <div th:insert="~{fragments/chat-widget :: widget}"></div>
+</body>
+</html>
