@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<!-- =============================================================================
+     Chat Widget Fragment — Included on every Thymeleaf page via th:replace
+     
+     RAG Architecture Note:
+     This fragment injects the floating chat UI into every page. It includes:
+       - The chat window HTML structure
+       - The CSS stylesheet for styling
+       - The JS script for interactivity and REST API communication
+     ============================================================================= -->
+
+<div th:fragment="widget">
+    <!-- Chat Widget CSS -->
+    <link rel="stylesheet" th:href="@{/css/chat-widget.css}" />
+
+    <!-- Floating Toggle Button -->
+    <button id="chat-toggle-btn" title="Open Chat Assistant">💬</button>
+
+    <!-- Chat Window -->
+    <div id="chat-window">
+        <!-- Header -->
+        <div id="chat-header">
+            <div class="chat-avatar">🤖</div>
+            <div>
+                <div class="chat-title">Book Assistant</div>
+                <div class="chat-subtitle">Powered by RAG · Ask me anything</div>
+            </div>
+        </div>
+
+        <!-- Messages -->
+        <div id="chat-messages"></div>
+
+        <!-- Conversation Starters -->
+        <div id="chat-starters"></div>
+
+        <!-- Input -->
+        <div id="chat-input-area">
+            <input id="chat-input" type="text" placeholder="Ask about books, users, themes..." autocomplete="off" />
+            <button id="chat-send-btn" title="Send">➤</button>
+        </div>
+    </div>
+
+    <!-- Chat Widget JS -->
+    <script th:src="@{/js/chat-widget.js}"></script>
+</div>
+
+</body>
+</html>
