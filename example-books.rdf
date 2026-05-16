@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:br="http://example.org/book-recommendation#">
+
+    <!-- Classes -->
+    <rdf:Description rdf:about="http://example.org/book-recommendation#User">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+        <rdfs:label>User</rdfs:label>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/book-recommendation#Book">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+        <rdfs:label>Book</rdfs:label>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/book-recommendation#Theme">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+        <rdfs:label>Theme</rdfs:label>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/book-recommendation#ReadingLevel">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+        <rdfs:label>Reading Level</rdfs:label>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/book-recommendation#Author">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+        <rdfs:label>Author</rdfs:label>
+    </rdf:Description>
+
+    <!-- Reading Levels -->
+    <rdf:Description rdf:about="http://example.org/book-recommendation#Beginner">
+        <rdf:type rdf:resource="http://example.org/book-recommendation#ReadingLevel"/>
+        <rdfs:label>Beginner</rdfs:label>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/book-recommendation#Intermediate">
+        <rdf:type rdf:resource="http://example.org/book-recommendation#ReadingLevel"/>
+        <rdfs:label>Intermediate</rdfs:label>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/book-recommendation#Advanced">
+        <rdf:type rdf:resource="http://example.org/book-recommendation#ReadingLevel"/>
+        <rdfs:label>Advanced</rdfs:label>
+    </rdf:Description>
+
+    <!-- Themes -->
+    <rdf:Description rdf:about="http://example.org/book-recommendation#Science_Fiction">
+        <rdf:type rdf:resource="http://example.org/book-recommendation#Theme"/>
+        <rdfs:label>Science Fiction</rdfs:label>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/book-recommendation#Fantasy">
+        <rdf:type rdf:resource="http://example.org/book-recommendation#Theme"/>
+        <rdfs:label>Fantasy</rdfs:label>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/book-recommendation#Mystery">
+        <rdf:type rdf:resource="http://example.org/book-recommendation#Theme"/>
+        <rdfs:label>Mystery</rdfs:label>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/book-recommendation#Murder">
+        <rdf:type rdf:resource="http://example.org/book-recommendation#Theme"/>
+        <rdfs:label>Murder</rdfs:label>
+    </rdf:Description>
+
+    <!-- Authors -->
+    <rdf:Description rdf:about="http://example.org/book-recommendation#Frank_Herbert">
+        <rdf:type rdf:resource="http://example.org/book-recommendation#Author"/>
+        <rdfs:label>Frank Herbert</rdfs:label>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/book-recommendation#Alex_Michaelides">
+        <rdf:type rdf:resource="http://example.org/book-recommendation#Author"/>
+        <rdfs:label>Alex Michaelides</rdfs:label>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/book-recommendation#Suzanne_Collins">
+        <rdf:type rdf:resource="http://example.org/book-recommendation#Author"/>
+        <rdfs:label>Suzanne Collins</rdfs:label>
+    </rdf:Description>
+
+    <!-- Users -->
+    <rdf:Description rdf:about="http://example.org/book-recommendation#Alice">
+        <rdf:type rdf:resource="http://example.org/book-recommendation#User"/>
+        <rdfs:label>Alice</rdfs:label>
+        <br:hasReadingLevel rdf:resource="http://example.org/book-recommendation#Intermediate"/>
+        <br:hasPreferredTheme rdf:resource="http://example.org/book-recommendation#Science_Fiction"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/book-recommendation#Bob">
+        <rdf:type rdf:resource="http://example.org/book-recommendation#User"/>
+        <rdfs:label>Bob</rdfs:label>
+        <br:hasReadingLevel rdf:resource="http://example.org/book-recommendation#Beginner"/>
+        <br:hasPreferredTheme rdf:resource="http://example.org/book-recommendation#Mystery"/>
+    </rdf:Description>
+
+    <!-- Books -->
+    <rdf:Description rdf:about="http://example.org/book-recommendation#Dune">
+        <rdf:type rdf:resource="http://example.org/book-recommendation#Book"/>
+        <br:title>Dune</br:title>
+        <rdfs:label>Dune</rdfs:label>
+        <br:hasAuthor rdf:resource="http://example.org/book-recommendation#Frank_Herbert"/>
+        <br:hasTheme rdf:resource="http://example.org/book-recommendation#Science_Fiction"/>
+        <br:hasTheme rdf:resource="http://example.org/book-recommendation#Fantasy"/>
+        <br:suitableForLevel rdf:resource="http://example.org/book-recommendation#Advanced"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/book-recommendation#The_Silent_Patient">
+        <rdf:type rdf:resource="http://example.org/book-recommendation#Book"/>
+        <br:title>The Silent Patient</br:title>
+        <rdfs:label>The Silent Patient</rdfs:label>
+        <br:hasAuthor rdf:resource="http://example.org/book-recommendation#Alex_Michaelides"/>
+        <br:hasTheme rdf:resource="http://example.org/book-recommendation#Mystery"/>
+        <br:hasTheme rdf:resource="http://example.org/book-recommendation#Murder"/>
+        <br:suitableForLevel rdf:resource="http://example.org/book-recommendation#Intermediate"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/book-recommendation#Hunger_Games">
+        <rdf:type rdf:resource="http://example.org/book-recommendation#Book"/>
+        <br:title>Hunger Games</br:title>
+        <rdfs:label>Hunger Games</rdfs:label>
+        <br:hasAuthor rdf:resource="http://example.org/book-recommendation#Suzanne_Collins"/>
+        <br:hasTheme rdf:resource="http://example.org/book-recommendation#Science_Fiction"/>
+        <br:hasTheme rdf:resource="http://example.org/book-recommendation#Fantasy"/>
+        <br:suitableForLevel rdf:resource="http://example.org/book-recommendation#Beginner"/>
+    </rdf:Description>
+
+</rdf:RDF>
