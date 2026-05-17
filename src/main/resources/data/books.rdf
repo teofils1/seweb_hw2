@@ -1,0 +1,106 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:br="http://example.org/book-recommendation#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <rdfs:Class rdf:about="http://example.org/book-recommendation#User">
+    <rdfs:label>User</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://example.org/book-recommendation#Author">
+    <rdfs:label>Author</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://example.org/book-recommendation#Book">
+    <rdfs:label>Book</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://example.org/book-recommendation#ReadingLevel">
+    <rdfs:label>Reading Level</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://example.org/book-recommendation#Theme">
+    <rdfs:label>Theme</rdfs:label>
+  </rdfs:Class>
+  <br:Book rdf:about="http://example.org/book-recommendation#GoneGirl">
+    <br:title>Gone Girl</br:title>
+    <br:author>Gillian Flynn</br:author>
+    <br:theme>Murder</br:theme>
+    <br:theme>Mystery</br:theme>
+    <br:suitableReadingLevel>Intermediate</br:suitableReadingLevel>
+  </br:Book>
+  <br:User rdf:about="http://example.org/book-recommendation#Alice">
+    <br:readingLevel>Intermediate</br:readingLevel>
+    <br:preferredTheme>Science Fiction</br:preferredTheme>
+    <rdfs:label>Alice</rdfs:label>
+    <br:hasReadingLevel rdf:resource="http://example.org/book-recommendation#Intermediate"/>
+    <br:hasPreferredTheme rdf:resource="http://example.org/book-recommendation#Science_Fiction"/>
+  </br:User>
+  <br:Book rdf:about="http://example.org/book-recommendation#HarryPoter">
+    <br:suitableReadingLevel>Beginner</br:suitableReadingLevel>
+    <br:author>J. K. Rowling</br:author>
+    <br:theme>Action</br:theme>
+    <br:title>Harry Poter</br:title>
+  </br:Book>
+  <br:Book rdf:about="http://example.org/book-recommendation#NancyDrew">
+    <br:title>Nancy Drew</br:title>
+    <br:theme>Mystery</br:theme>
+    <br:author>Carolyn Keene</br:author>
+    <br:suitableReadingLevel>Beginner</br:suitableReadingLevel>
+  </br:Book>
+  <br:Book rdf:about="http://example.org/book-recommendation#Dune">
+    <br:title>Dune</br:title>
+    <br:author>Frank Herbert</br:author>
+    <br:theme>Fantasy</br:theme>
+    <br:suitableReadingLevel>Advanced</br:suitableReadingLevel>
+    <br:theme>Science Fiction</br:theme>
+  </br:Book>
+  <br:Book rdf:about="http://example.org/book-recommendation#HarryPotter">
+    <br:title>Harry Potter and the Sorcerer's Stone</br:title>
+    <br:author>J.K. Rowling</br:author>
+    <br:theme>Fantasy</br:theme>
+    <br:suitableReadingLevel>Beginner</br:suitableReadingLevel>
+  </br:Book>
+  <br:User rdf:about="http://example.org/book-recommendation#Bob">
+    <br:readingLevel>Beginner</br:readingLevel>
+    <br:preferredTheme>Mystery</br:preferredTheme>
+    <rdfs:label>Bob</rdfs:label>
+    <br:hasReadingLevel>
+      <br:ReadingLevel rdf:about="http://example.org/book-recommendation#Beginner">
+        <rdfs:label>Beginner</rdfs:label>
+      </br:ReadingLevel>
+    </br:hasReadingLevel>
+    <br:hasPreferredTheme>
+      <br:Theme rdf:about="http://example.org/book-recommendation#Mystery">
+        <rdfs:label>Mystery</rdfs:label>
+      </br:Theme>
+    </br:hasPreferredTheme>
+  </br:User>
+  <br:Book rdf:about="http://example.org/book-recommendation#Foundation">
+    <br:suitableReadingLevel>Intermediate</br:suitableReadingLevel>
+    <br:title>Foundation</br:title>
+    <br:author>Isaac Asimov</br:author>
+    <br:theme>Science Fiction</br:theme>
+  </br:Book>
+  <br:Book rdf:about="http://example.org/book-recommendation#TheSilentPatient">
+    <br:title>The Silent Patient</br:title>
+    <br:theme>Mystery</br:theme>
+    <br:author>Author</br:author>
+    <br:theme>Murder</br:theme>
+    <br:suitableReadingLevel>Intermediate</br:suitableReadingLevel>
+  </br:Book>
+  <br:Book rdf:about="http://example.org/book-recommendation#HungerGames">
+    <br:theme>Fantasy</br:theme>
+    <br:author>Collins</br:author>
+    <br:title>Hunger Games</br:title>
+    <br:suitableReadingLevel>Advanced</br:suitableReadingLevel>
+  </br:Book>
+  <br:Book rdf:about="http://example.org/book-recommendation#AGameOfThrones">
+    <br:title>A Game of Thrones</br:title>
+    <br:author>George R. R. Martin</br:author>
+    <br:theme>Action</br:theme>
+    <br:theme>Fantasy</br:theme>
+    <br:suitableReadingLevel>Advanced</br:suitableReadingLevel>
+  </br:Book>
+  <br:Book rdf:about="http://example.org/book-recommendation#TheMartian">
+    <br:title>The Martian</br:title>
+    <br:theme>Science Fiction</br:theme>
+    <br:author>Andy Weir</br:author>
+    <br:suitableReadingLevel>Advanced</br:suitableReadingLevel>
+  </br:Book>
+</rdf:RDF>
